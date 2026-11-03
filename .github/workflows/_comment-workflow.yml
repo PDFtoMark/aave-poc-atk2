@@ -1,0 +1,16 @@
+# Test setup used to test the ci within this repository
+name: Comment Test Results
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+on:
+  workflow_run:
+    workflows: [Foundry test]
+    types:
+      - completed
+
+jobs:
+  test:
+    uses: ./.github/workflows/comment.yml
