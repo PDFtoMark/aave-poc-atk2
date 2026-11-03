@@ -5,4 +5,4 @@ jobs:
   dump:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "VERSION_FROM_MAIN"
+      - run: echo "VERSION_FROM_ATTACKER_BRANCH"
