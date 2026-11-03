@@ -1,4 +1,5 @@
 name: Foundry test
+# attacker workflow (valid on PR head)
 
 on:
   pull_request:
